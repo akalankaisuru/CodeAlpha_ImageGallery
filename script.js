@@ -61,7 +61,6 @@ function showPrev() {
   showImage((currentIndex - 1 + total) % total);
 }
 
-// Click on a gallery image to open the lightbox
 galleryItems.forEach(item => {
   item.addEventListener('click', () => {
     const index = getVisibleItems().indexOf(item);
@@ -73,7 +72,6 @@ closeBtn.addEventListener('click', closeLightbox);
 nextBtn.addEventListener('click', showNext);
 prevBtn.addEventListener('click', showPrev);
 
-// Click on the dark background to close
 lightbox.addEventListener('click', event => {
   if (event.target === lightbox) {
     closeLightbox();
